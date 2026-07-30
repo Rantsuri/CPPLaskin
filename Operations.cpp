@@ -7,7 +7,7 @@ using namespace std;
 
 void Operations::add_lask(double value)
 {
-    current = +value;
+    current +=value;
 }
 
 void Operations::minus_lask(double value)
@@ -22,11 +22,18 @@ void Operations::multiply_lask(double value)
 
 void Operations::divide_lask(double value)
 {
-    current *= value;
+    if(value == 0){
+        throw runtime_error("Division by zero");
+    }
+    current /= value;
 }
 
 void Operations::mod_lask(double value)
 {
+    
+    if(value == 0){
+        throw runtime_error("Division by zero");
+    }
     current = fmod(current, value);
 }
 
@@ -76,12 +83,16 @@ void Operations::sq_root()
         throw runtime_error("square root of negative number");
 
     }
+     current = sqrt(current);
 }
 
 void Operations::clear_lask()
 {
+    current = 0;
+    //katotaan mitä tästäki tulee
 }
 
 void Operations::close_lask()
 {
+    //katotaan faijfipajfwijia
 }

@@ -8,6 +8,10 @@ public:
 
  double getValue() const {
      return current; }
+
+     void setValue(double value){
+        current = value;
+     }
     void add_lask(double value);
     void minus_lask(double value);
     void multiply_lask(double value);
